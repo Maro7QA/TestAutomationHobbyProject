@@ -13,7 +13,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'http://localhost',
+      url: 'https://www.magentasport.de/',
       // show: true,
       headless: true, // Set to true for headless mode
     }
