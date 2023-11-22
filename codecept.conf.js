@@ -15,7 +15,7 @@ exports.config = {
       browser: 'chromium',
       url: 'https://www.magentasport.de/',
       // show: true,
-      headless: true, // Set to true for headless mode
+      headless: false, // Set to true for headless mode
     }
   },
   include: {
