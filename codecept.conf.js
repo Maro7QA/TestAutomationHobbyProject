@@ -14,7 +14,8 @@ exports.config = {
     Playwright: {
       browser: 'chromium',
       url: 'http://localhost',
-      show: true
+      // show: true,
+      headless: true, // Set to true for headless mode
     }
   },
   include: {
