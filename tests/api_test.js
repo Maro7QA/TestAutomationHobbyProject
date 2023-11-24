@@ -1,4 +1,5 @@
-import { expect } from "chai";
+const expect = require("chai").expect;
+
 Feature('API calls')
 Scenario('Verify some basic api-calls Get call @api-calls', async ({ I }) => {
     const res = await I.sendGetRequest(
