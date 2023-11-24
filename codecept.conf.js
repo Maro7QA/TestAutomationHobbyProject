@@ -16,6 +16,13 @@ exports.config = {
       url: 'https://www.magentasport.de/',
       // show: true,
       headless: false, // Set to true for headless mode
+    },
+    REST: {
+      endpoint: 'https://www.magentasport.de/',
+      defaultHeaders: {
+        "Content-Type": "application/json",
+        //apiKey:24242424242424
+      }
     }
   },
   include: {
