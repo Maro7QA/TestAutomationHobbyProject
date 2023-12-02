@@ -1,4 +1,4 @@
-Scenario('Access dataLayer using executeScript', async (I) => {
+Scenario('Access dataLayer using executeScript', async ({ I }) => {
     I.amOnPage('https://example.com');
 
     // Use I.executeScript to execute script in browser context
