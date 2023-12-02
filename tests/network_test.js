@@ -8,7 +8,7 @@
 
 Feature('Example Feature');
 
-Scenario('Execute Script Example', (I) => {
+Scenario('Execute Script Example', async ({ I }) => {
     I.amOnPage('https://example.com');
 
     // Example of using executeScript to change the page title
