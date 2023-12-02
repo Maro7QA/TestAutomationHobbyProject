@@ -17,6 +17,10 @@ exports.config = {
       // show: true,
       headless: false, // Set to true for headless mode
     },
+    MailSlurp: {
+      require: '@codeceptjs/mailslurp-helper',
+      apiKey: '49d342d7e2c74c4061c2ce775af3d50b741298416f7ba7ae97b2f9acfc08e2e3'
+    },
     REST: {
       endpoint: 'https://www.magentasport.de/',
       defaultHeaders: {
