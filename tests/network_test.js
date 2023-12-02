@@ -22,4 +22,7 @@ Scenario('Execute Script Example', async ({ I }) => {
     });
 
     I.say(`The new page title is: ${pageTitle}`);
+
+    networkTraffic = await I.executeScript("return window.performance.getEntries();")
+    console.log(networkTraffic);
 });
