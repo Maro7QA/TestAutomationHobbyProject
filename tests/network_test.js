@@ -23,6 +23,11 @@ Scenario('Execute Script Example', async ({ I }) => {
 
     I.say(`The new page title is: ${pageTitle}`);
 
-    networkTraffic = await I.executeScript("return window.performance.getEntries();")
+    // Use page.evaluate to execute script in browser context
+    const networkTraffic = await I.executeScript(() => {
+        // The code inside here is executed in the browser context
+        return window.performance.getEntries();
+    });
+
     console.log(networkTraffic);
 });
