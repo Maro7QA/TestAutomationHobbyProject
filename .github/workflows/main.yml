@@ -21,7 +21,7 @@ jobs:
 
       - name: Download new browser
         run: |
-          npx playwright install
+          npx playwright install chromium
 
       - name: Run Playwright CodeceptJS tests
         run: |
