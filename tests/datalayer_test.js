@@ -4,6 +4,7 @@ Scenario('Access dataLayer using executeScript', async ({ I }) => {
     I.amOnPage("/");
     landingPage.selectAcceptAllCookies();
     I.wait(2);
+    I.saveScreenshot("test.png");
     const dataLayer = await I.executeScript(() => {
         // The code inside here is executed in the browser context
         return window.dataLayer; // Assuming dataLayer is a global object in the browser
