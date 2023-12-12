@@ -13,8 +13,8 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://www.magentasport.de/',
-      // show: true,
+      url: 'https://www.magentasport.de',
+      show: true,
       headless: false, // Set to true for headless mode
     },
     MailSlurp: {
