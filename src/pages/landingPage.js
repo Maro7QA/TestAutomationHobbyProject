@@ -21,6 +21,7 @@ class LandingPage {
 
     showResults() {
         const { I } = inject();
+        I.wait(1);
         I.scrollPageToTop();
         I.waitForVisible(this.showAllResults, 10);
         I.click(this.showAllResults);
