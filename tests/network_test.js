@@ -1,5 +1,7 @@
 const landingPage = require("../src/pages/landingPage");
 
+const expect = require("chai").expect;
+
 Feature('Example Feature');
 
 xScenario('Execute Script Example', async ({ I }) => {
@@ -33,7 +35,7 @@ Scenario('Tracking', async ({ I }) => {
     I.scrollTo('[class="showcase-calendar"]');
     I.wait(1);
     I.scrollTo('(//*[@class="lane-event js-metadata-container"])[1]',0,-200);
-    I.wait(1);
+    I.wait(2);
     I.click('(//*[@class="lane-event js-metadata-container"])[1]');
     I.wait(3);
 
@@ -51,5 +53,6 @@ Scenario('Tracking', async ({ I }) => {
       const result = containsSubstring(networkTraffic, "https://pix.telekom.de/");
       
       // Display the result
-      console.log(result);
+        console.log(result[result.length-1].name);
+      expect(JSON.stringify(result[result.length-1].name)).to.contain("ct=www.magenta");
 });
