@@ -1,6 +1,6 @@
 name: Playwright CodeceptJS Tests
 
-on: [push, pull_request,'0 * * * *']
+on: [push, pull_request]
  
 jobs:
   test:
