@@ -15,7 +15,7 @@ class LandingPage {
 
     selectBasketball() {
         const { I } = inject();
-        I.wait(1);
+        I.wait(4);
         I.waitForVisible(this.basketballTab);
         I.click(this.basketballTab);
     }
