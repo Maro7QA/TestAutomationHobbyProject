@@ -1,6 +1,8 @@
 name: Playwright CodeceptJS Tests
 
 on: 
+  schedule:
+  - cron: '3 * * * *'
   push:
  
 jobs:
