@@ -54,5 +54,6 @@ Scenario('Tracking', async ({ I }) => {
       
       // Display the result
         console.log(result[result.length-1].name);
+        console.log(result.length-1);
       expect(JSON.stringify(result[result.length-1].name)).to.contain("ct=www.magenta");
 });
