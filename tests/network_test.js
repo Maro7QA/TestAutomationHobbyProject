@@ -1,4 +1,6 @@
 const landingPage = require("../src/pages/landingPage");
+const homePage= require("../src/pages/homePage");
+const delPage= require("../src/pages/delPage");
 
 const expect = require("chai").expect;
 
@@ -43,7 +45,7 @@ Data(runs).Scenario('Tracking @window', async ({ I }) => {
     I.wait(2);
     I.scrollPageToBottom();
     I.wait(2);
-    I.scrollTo('[class="showcase-calendar"]');
+    I.scrollTo(homePage.showCaseCalendar);
     I.wait(1);
     I.scrollTo('(//*[@class="lane-event js-metadata-container"])[1]',0,-200);
     I.wait(4);
@@ -72,9 +74,7 @@ Data(runs).Scenario('Tracking @home', async ({ I }) => {
     I.amOnPage('/home');
     landingPage.selectAcceptAllCookies();
     // Example of using executeScript to change the page title
-    I.scrollTo('(//*[@class="epg-element__link"])[1]',0,-200);
-    I.wait(2);
-    I.click('(//*[@class="epg-element__link"])[1]');
+    homePage.selectGameInEpg(1);
     I.wait(7);
 
     // Use page.evaluate to execute script in browser context
