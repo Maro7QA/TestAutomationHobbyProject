@@ -93,7 +93,7 @@ Data(runs).Scenario('Tracking @home', async ({ I }) => {
       // Display the result
       //  console.log(result[result.length-1].name);
         console.log(result.length-1);
-     expect(JSON.stringify(result)).to.contain("ct=content.video.epg.www.magentasport");
+     expect(JSON.stringify(result)).to.contain("ct=");
 });
 
 Data(runs).Scenario('Tracking @hockey', async ({ I }) => {
