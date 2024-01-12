@@ -2,11 +2,12 @@ name: Playwright CodeceptJS Tests
 
 on: 
   schedule:
-  - cron: '3 * * * *'
+  - cron: '3 * * * *'  # Schedule for the first set of tests
+  - cron: '0 */4 * * *' # Schedule for the second set of tests
   push:
  
 jobs:
-  test:
+  test_tracking:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,3 +30,27 @@ jobs:
       - name: Run Playwright CodeceptJS tests
         run: |
           xvfb-run npx codeceptjs run -g Tracking --steps
+
+  test_home:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Download new browser
+        run: |
+          npx playwright install chromium
+
+      - name: Run Playwright CodeceptJS tests (Home)
+        run: |
+          xvfb-run npx codeceptjs run
