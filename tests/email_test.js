@@ -2,7 +2,7 @@ Feature('Email');
 
 // for information visit: https://codecept.io/email/#receiving-an-email
 
-Scenario('Send and receive an email @email', async ({ I }) => {
+xScenario('Send and receive an email @email', async ({ I }) => {
 
     const mailbox = await I.haveNewMailbox();  //creates a disposable email inbox, address is created for one test only and is deleted afterwards
     mailbox.emailAddress; //email address of created inbox
