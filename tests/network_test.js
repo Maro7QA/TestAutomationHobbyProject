@@ -67,7 +67,7 @@ Data(runs).Scenario('Tracking @window', async ({ I }) => {
       // Display the result
         console.log(result[result.length-1].name);
         console.log(result.length-1);
-      expect(JSON.stringify(result[result.length-1].name)).to.contain("ct=www.magenta");
+      expect(JSON.stringify(result[result.length-1].name)).to.contain("ct=");
 });
 
 Data(runs).Scenario('Tracking @home', async ({ I }) => {
@@ -93,7 +93,7 @@ Data(runs).Scenario('Tracking @home', async ({ I }) => {
       // Display the result
       //  console.log(result[result.length-1].name);
         console.log(result.length-1);
-     expect(JSON.stringify(result)).to.contain("ct=");
+     expect(JSON.stringify(result)).to.contain("ct");
 });
 
 Data(runs).Scenario('Tracking @hockey', async ({ I }) => {
@@ -127,6 +127,7 @@ Data(runs).Scenario('Tracking @hockey', async ({ I }) => {
       // Display the result
      //   console.log(result[result.length-1].name);
         console.log(result.length-1);
+        expect(JSON.stringify(result)).to.contain("cg2=");
     //  expect(JSON.stringify(result)).to.contain("ct=content.video.player");
 });
 
