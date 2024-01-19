@@ -43,14 +43,12 @@ Data(runs).Scenario('Tracking @window', async ({ I }) => {
     landingPage.selectAcceptAllCookies();
     // Example of using executeScript to change the page title
     I.wait(2);
-    I.scrollPageToBottom();
-    I.wait(2);
     I.scrollTo(homePage.showCaseCalendar);
     I.wait(1);
-    I.scrollTo('(//*[@class="lane-event js-metadata-container"])[1]',0,-200);
+   landingPage.selectGameInLiveNKostenlos(1);
     I.wait(4);
-    I.click('(//*[@class="lane-event js-metadata-container"])[1]');
-    I.wait(4);
+
+
     // Use page.evaluate to execute script in browser context
     const networkTraffic = await I.executeScript(() => {
         // The code inside here is executed in the browser context
@@ -101,15 +99,9 @@ Data(runs).Scenario('Tracking @hockey', async ({ I }) => {
     I.wait(10);
     landingPage.selectAcceptAllCookies();
     I.wait(5);
-     I.scrollTo('(//*[@class="content-group__header"])[8]');
-     I.wait(2);
+    delPage.goToEpgHeader(8);
     I.wait(2);
-    I.scrollTo('(//*[@class="wrapper lane-wrapper"])[8]');
-    I.wait(1);
-    // Example of using executeScript to change the page title
-    I.scrollTo('((//*[@class="wrapper lane-wrapper"])[8]//*[@class="lane-event js-metadata-container"])[1]',0,-200);
-    I.wait(2);
-    I.click('((//*[@class="wrapper lane-wrapper"])[8]//*[@class="lane-event js-metadata-container"])[1]');
+    delPage.selectGameInEpgDel(8,1);
     I.wait(5);
 
     // Use page.evaluate to execute script in browser context

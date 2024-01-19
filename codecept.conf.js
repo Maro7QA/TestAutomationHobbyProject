@@ -29,6 +29,11 @@ exports.config = {
       }
     }
   },
+  "mocha": {
+    "reporterOptions": {
+        "reportDir": "output"
+    }
+  },
   include: {
     I: './steps_file.js'
   },

@@ -7,12 +7,17 @@ class DelPage {
 
     selectGameInEpgDel(EPGRow,gameNumber) {
         const { I } = inject();
-        gamesInEpgDelSetRow=gamesInEpgDel.replace("XX",EPGRow);
-        gamesInEpgDelSetGame=gamesInEpgDelSetRow.replace("GG",gameNumber);
-        I.scrollTo(this.gamesInEpgDelSetGame,0,-200);
+        let gamesInEpgDelSetRow=this.gamesInEpgDel.replace("XX",EPGRow);
+        const gamesInEpgDelSetGame=gamesInEpgDelSetRow.replace("GG",gameNumber);
+        I.scrollTo(gamesInEpgDelSetGame,0,-200);
         I.wait(2);
-        I.click(this.gamesInEpgDelSetGame,0,-200);
+        I.click(gamesInEpgDelSetGame,0,-200);
         }
+
+    goToEpgHeader(EPGRow){
+        const { I } = inject();
+        I.scrollTo(this.epgHeader.replace("XX",EPGRow),0,-200);  
+    }
 
 }
 

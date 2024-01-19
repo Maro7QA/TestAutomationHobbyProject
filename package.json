@@ -18,5 +18,8 @@
     "chai": "^4.3.10",
     "codeceptjs": "^3.5.10",
     "playwright": "^1.40.1"
+  },
+  "dependencies": {
+    "mochawesome": "^7.1.3"
   }
 }
