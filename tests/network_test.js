@@ -95,6 +95,8 @@ Data(runs).Scenario('Tracking @home', async ({ I }) => {
 });
 
 Data(runs).Scenario('Tracking @hockey', async ({ I }) => {
+    I.amOnPage('/');
+    I.wait(3;)
     I.amOnPage('/del');
     I.wait(10);
     landingPage.selectAcceptAllCookies();
