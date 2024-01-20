@@ -3,7 +3,7 @@ const expect = require("chai").expect;
 Feature('API calls')
 Scenario('Verify some basic api-calls Get call @api-calls', async ({ I }) => {
     const res = await I.sendGetRequest(
-        "https://www.verivox.de/"
+        "https://www.magentasport.de/home"
     );
     expect(res.status).to.eql(200);
 });
